@@ -7,11 +7,11 @@ genres = {
     "jazz": ["Miles Davis - So What", "John Coltrane - Giant Steps", "Ella Fitzgerald - Summertime"],
 }
 
-choice = input(
+choices = input(
     "what genre of music do you like? (rock,pop,hip-hop,jazz): ").lower()
 
-if choice in genres:
+if choices in genres:
     print(
-        f"Here are some {random.choice(genres[choice])}, songs you might like:")
+        f"Here are some {random.choice(genres[choices])}, songs you might like:")
 else:
     print("☹ Sorry, I don't know that genre.")
