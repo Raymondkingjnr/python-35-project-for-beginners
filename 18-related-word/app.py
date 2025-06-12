@@ -20,7 +20,7 @@ rounds = 0
 
 while True:
     prompt = random.choice(list(word_pairs.keys()))
-    related_words = word_pairs(prompt)
+    related_words = word_pairs[prompt]
 
     print(f"\n Prompt word: {prompt.upper()}")
     print("Quick! Type a word related to this prompt!")
@@ -39,10 +39,10 @@ while True:
             f"Good word association, +{points} points (answered in {response_time:.1f}s)")
     else:
         print(
-            f"Not a commin association. Related words included: {','.join(related_words)}")
-    round += 1
+            f"Not a common association. Related words included: {','.join(related_words)}")
+    round = + 1
     print(f"score: {score}/{round + 5} possible points")
 
     if input("\n Play again? (yes/no): ").lower().startswith("n"):
-        print("Final score: {score}. Thanks for playing")
+        print(f"Final score: {score}. Thanks for playing")
         break
